@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 import { SearchFilterPipe } from './pipes/search-filter-pipe';
 
 const action = (e): void => {

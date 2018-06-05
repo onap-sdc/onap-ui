@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 import { RegexPatterns } from '../../src/angular/common/enums';
 import { DropDownOptionType, IDropDownOption } from './../../src/angular/form-elements/dropdown/dropdown-models';
 
@@ -92,11 +92,11 @@ export default experimentOn('Validation')
             id: 'validation5',
             showSource: true,
             title: 'Validation with validity changed callback',
-            description: 'Simple validation with log in the console when validity changes',
+            description: 'Simple validation with alert when validity changes',
             context: {
                 numbersPattern: RegexPatterns.numbers,
                 validityChanged: (newState: boolean) => {
-                    console.log("Validity has changed to " + newState);
+                    alert("Validity has changed to " + newState);
                 }
             },
             template: `

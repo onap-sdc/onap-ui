@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 import { ChecklistItemModel } from "../../src/angular/checklist/models/ChecklistItem";
 import { ChecklistModel } from "../../src/angular/checklist/models/Checklist";
 

@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 
 const alert1  = window.alert;
 const console1  = console.log;

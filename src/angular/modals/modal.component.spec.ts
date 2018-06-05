@@ -4,7 +4,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core/src/metadata/ng_module';
 import { ModalService } from './modal.service';
 import { CreateDynamicComponentService } from "../utils/create-dynamic-component.service";
 import { IModalConfig, ModalType, ModalSize } from "../../../src/angular/modals/models/modal-config";
-import { ModalInnerContent } from "../../../stories/ng2-component-lab/components/modal-inner-content-example.component";
+import { ModalInnerContent } from "../../../stories/ng-component-lab/components/modal-inner-content-example.component";
 
 
 describe("Modal unit-tests", () => {

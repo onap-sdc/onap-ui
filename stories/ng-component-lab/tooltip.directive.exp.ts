@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 import { ArrowPlacement, TooltipPlacement } from '../../src/angular/tooltip/tooltip.directive';
 
 const customTemplate = `
