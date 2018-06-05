@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Component, Input, NgModule, ViewContainerRef, Inject, Injectable, Type, ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Injector } from '@angular/core';
-import { NO_ERRORS_SCHEMA } from '@angular/core/src/metadata/ng_module';
+import { Component, Input, NgModule, ViewContainerRef, Inject, Injectable, Type, ApplicationRef, ComponentFactoryResolver, ComponentRef, EmbeddedViewRef, Injector, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ModalService } from './modal.service';
 import { CreateDynamicComponentService } from "../utils/create-dynamic-component.service";
 import { IModalConfig, ModalType, ModalSize } from "../../../src/angular/modals/models/modal-config";
@@ -17,12 +16,12 @@ describe("Modal unit-tests", () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-           providers:[
+           providers: [
                 ModalService,
                 { provide : CreateDynamicComponentService, useClass: CreateDynamicComponentServiceTest}
             ],
             declarations: [],
-            schemas:[NO_ERRORS_SCHEMA]
+            schemas: [NO_ERRORS_SCHEMA]
         })
         testService = TestBed.get(ModalService);
     }));
