@@ -14,9 +14,9 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
-      repo: onap-sdc/sdc-ui
+      repo: onap-sdc/onap-ui
   - provider: pages
-    repo: onap-sdc/sdc-ui
+    repo: onap-sdc/onap-ui
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     local_dir: .out
