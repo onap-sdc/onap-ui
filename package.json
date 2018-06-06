@@ -93,6 +93,7 @@
     "karma-spec-reporter": "0.0.30",
     "karma-typescript": "^3.0.8",
     "karma-webpack": "2.0.3",
+    "less-plugin-sass2less": "^1.2.0",
     "lite-server": "^2.3.0",
     "ncp": "^2.0.0",
     "node-sass": "^4.9.0",
