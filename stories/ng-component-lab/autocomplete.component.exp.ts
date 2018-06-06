@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 
 export default experimentOn('Autocomplete').group('Autocomplete',
 [
@@ -67,7 +67,7 @@ export default experimentOn('Autocomplete').group('Autocomplete',
         <sdc-autocomplete
             placeholder="search text"
             label="search by color:"
-            dataUrl="../../../stories/ng2-component-lab/utils/mock.json"
+            dataUrl="../../../stories/ng-component-lab/utils/mock.json"
             [dataSchema]="{key: 'id', value: 'color'}"
             (itemSelected)="showSelectedItem($event)"
             >

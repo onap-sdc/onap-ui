@@ -1,15 +1,15 @@
-import { createLab } from '@islavi/ng2-component-lab';
-import { ComponentsModule } from './../stories/ng2-component-lab/components.module';
+import { createLab } from '@islavi/ng-component-lab';
+import { ComponentsModule } from './../stories/ng-component-lab/components.module';
 
-const themeName:string = 'default';
-//const themeName:string = '1802';
+const themeName: string = 'default';
+// const themeName:string = '1802';
 
 // Select the theme
 if (themeName === '1802') {
-  require('./themes/ng2-component-lab-theme-1802.scss');
+  require('./themes/ng-component-lab-theme-1802.scss');
 } else {
   // Default theme
-  require('./ng2-component-lab.scss');
+  require('./ng-component-lab.scss');
 }
 
 createLab({
@@ -26,8 +26,8 @@ createLab({
    * default exports as an array:
    */
   loadExperiments() {
-    const context = (require as any).context('./../stories/ng2-component-lab', true, /\.exp\.ts/);
-	  var result = context.keys().map(context).map(mod => mod.default);
+    const context = (require as any).context('./../stories/ng-component-lab', true, /\.exp\.ts/);
+    const result = context.keys().map(context).map(mod => mod.default);
     context.keys().forEach(key => {
       console.log("Going to require: " + key);
     });

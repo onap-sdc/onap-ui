@@ -1,4 +1,4 @@
-import { experimentOn } from '@islavi/ng2-component-lab';
+import { experimentOn } from '@islavi/ng-component-lab';
 
 const buttonTypes = ['primary', 'secondary', 'link', 'alert'];
 const buttonSizes = ['large', 'medium', 'small', 'x-small', 'default'];
