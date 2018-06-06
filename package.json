@@ -31,7 +31,7 @@
     "build-storybook": "npm run build-common && build-storybook -c .storybook -o .out/react && ncp utils/index-for-gh-pages.html .out/index.html && ncp utils/main-page.html .out/main-page.html && ncp assets .out/assets",
     "lab": "npm run build-common && ng-component-lab --config .ng-component-lab/ng-component-lab.config.js -- feature",
     "build-lab": "set NODE_ENV=build&& ng-component-lab --config .ng-component-lab/ng-component-lab.config.js --build -- feature",
-    "build-gh-pages": "npm run build-storybook && npm run build-lab && ncp utils/index-for-gh-pages.html .out/index.html && ncp utils/main-page.html .out/main-page.html && ncp assets .out/assets"
+    "build-gh-pages": "npm run build-storybook && ncp utils/index-for-gh-pages.html .out/index.html && ncp utils/main-page.html .out/main-page.html && ncp assets .out/assets"
   },
   "repository": {
     "type": "git",
