@@ -6,6 +6,6 @@ module.exports = {
   port: 6007,
   include: [],
   suites: {
-    feature: './.ng-component-lab/lab-configuration.module.ts'
+    feature: '.ng-component-lab/lab-configuration.module.ts'
   }
 };
