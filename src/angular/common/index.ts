@@ -1,3 +1,9 @@
-import * as SdcUiCommon from './enums';
-
-export { SdcUiCommon };
+export { Size } from './enums';
+export { Mode } from './enums';
+export { ButtonType } from './enums';
+export { Placement } from './enums';
+export { RegexPatterns } from './enums';
+export { IModalConfig } from '../modals/models/modal-config';
+export { IModalButtonComponent } from '../modals/models/modal-config';
+export { ModalType } from '../modals/models/modal-config';
+export { ModalSize } from '../modals/models/modal-config';
