@@ -8,13 +8,13 @@ import { Placement, ButtonType } from "../../../src/angular/common/enums";
 import { ModalComponent } from "../../../src/angular/components";
 
 const MODAL_CONTENT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed risus nisl, egestas vitae erat non,' +
-    'pulvinar lacinia libero. Integer pulvinar pellentesque accumsan. Sed hendrerit lacus eu tempus pharetra';
+'pulvinar lacinia libero. Integer pulvinar pellentesque accumsan. Sed hendrerit lacus eu tempus pharetra';
 
 @Component({
     selector: 'modal-consumer',
     template: `<sdc-button [text]="'View Modal'" (click)="openModal()"></sdc-button>`
 })
-export class ModalConsumer {
+export class ModalConsumerComponent {
     @Input() action: string;
     private customModal1: ModalComponent;
     private customModal2: ModalComponent;
@@ -80,9 +80,9 @@ export class ModalConsumer {
             type: ModalType.custom,
             testId: 'sampleTestIdModal1',
             buttons: [
-                {id: "saveButton", text: "Save", callback: this.customModalOnSave1, closeModal: false},
-                {id: "cancelButton", text: "Cancel", size: 'x-small', type: ButtonType.secondary , closeModal: true}
-            ]
+                      {id: "saveButton", text: "Save", callback: this.customModalOnSave1, closeModal: false},
+                      {id: "cancelButton", text: "Cancel", size: 'x-small', type: ButtonType.secondary , closeModal: true}
+                    ]
         } as IModalConfig;
         this.customModal1 = this.modalService.openCustomModal(modalConfig, ModalInnerContent, {name: "Sample Content"});
     }
@@ -91,12 +91,11 @@ export class ModalConsumer {
         const saveButton: ModalButtonComponent = this.customModal1.getButtonById("saveButton");
         saveButton.show_spinner = true;
         saveButton.spinner_position = Placement.right;
-        this.customModal1.disabledModal(true);
+
         // Show spinner for 2 seconds
         console.log('Saving example, please wait ...');
         window.setTimeout((button: ModalButtonComponent) => {
             button.show_spinner = false;
-            this.customModal1.disabledModal(false);
             console.log('Finish saving');
         }, 2000, saveButton);
     }
@@ -108,10 +107,10 @@ export class ModalConsumer {
             type: ModalType.custom,
             testId: 'sampleTestIdModal2',
             buttons: [
-                {text: "Change title", callback: this.customModalChangeTitle2, closeModal: false},
-                {text: "Change buttons", callback: this.customModalUpdateButtons2, closeModal: false},
-                {text: "Disable close", callback: this.customModalUDisableClose2, closeModal: false}
-            ]
+                      {text: "Change title", callback: this.customModalChangeTitle2, closeModal: false},
+                      {text: "Change buttons", callback: this.customModalUpdateButtons2, closeModal: false},
+                      {text: "Disable close", callback: this.customModalUDisableClose2, closeModal: false}
+                    ]
         } as IModalConfig;
         this.customModal2 = this.modalService.openCustomModal(modalConfig, ModalInnerContent, {name: "Sample Content"});
     }
@@ -128,7 +127,7 @@ export class ModalConsumer {
         const newButtons = [
             {text: "Change title", callback: this.customModalChangeTitle2, closeModal: false},
             {text: "Do nothing", closeModal: false}
-        ] as ModalButtonComponent[];
+          ] as ModalButtonComponent[];
         this.customModal2.setButtons(newButtons);
     }
 
