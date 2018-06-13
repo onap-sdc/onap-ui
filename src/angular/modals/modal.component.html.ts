@@ -8,9 +8,10 @@ export default `
             <sdc-modal-close-button #modalCloseButton [testId]="getCalculatedTestId('close')" [modalInstanceRef]="instanceRef"></sdc-modal-close-button>
         </div>
 
-        <div class="sdc-modal__content" >
+        <div class="sdc-modal__content">
                 <div *ngIf="message" [innerHtml]="message"></div>
                 <div #dynamicContentContainer></div>
+                <div class="disabled-modal" *ngIf="isDisabled"></div>
         </div>
 
         <div class="sdc-modal__footer">
