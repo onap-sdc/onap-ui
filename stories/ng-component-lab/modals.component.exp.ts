@@ -27,60 +27,60 @@ const sourceStyles: string = `
 
 export default experimentOn('Modals')
     .group("Modals", [
-        {
-            id: 'infoModal',
-            showSource: false,
-            title: 'Info modal',
-            description: `Opens info modal with one 'OK' button by default that close the modal.`,
-            template: `
+      {
+        id: 'infoModal',
+        showSource: false,
+        title: 'Info modal',
+        description: `Opens info modal with one 'OK' button by default that close the modal.`,
+        template: `
         <modal-consumer [action]="'openInfoModal'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>this.modalService.openInfoModal('Info modal title', 'Info modal content', 'infoModalTestId');</pre>
         </div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'warningModal',
-            showSource: false,
-            title: 'Warning modal',
-            description: `Opens warning modal with one 'OK' button by default that close the modal.`,
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'warningModal',
+        showSource: false,
+        title: 'Warning modal',
+        description: `Opens warning modal with one 'OK' button by default that close the modal.`,
+        template: `
         <modal-consumer [action]="'openWarningModal'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>this.modalService.openWarningModal('Warning modal title', 'Warning modal content', 'warningModalTestId');</pre>
         </div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'errorModal',
-            showSource: false,
-            title: 'Error modal',
-            description: `Opens error modal with one 'OK' button by default that close the modal.`,
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'errorModal',
+        showSource: false,
+        title: 'Error modal',
+        description: `Opens error modal with one 'OK' button by default that close the modal.`,
+        template: `
         <modal-consumer [action]="'openErrorModal'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>this.modalService.openErrorModal('Error modal title', 'Error modal content', 'errorModalTestId');</pre>
         </div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'successModal',
-            showSource: false,
-            title: 'Success modal',
-            description: `Opens succsess modal with one 'OK' button by default that close the modal.`,
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'successModal',
+        showSource: false,
+        title: 'Success modal',
+        description: `Opens succsess modal with one 'OK' button by default that close the modal.`,
+        template: `
         <modal-consumer [action]="'openSuccessModal'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>this.modalService.openSuccessModal('Success modal title', 'Success modal content', 'successModalTestId');</pre>
         </div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'infoModalWithCustomButtons',
-            showSource: false,
-            title: 'Info modal with custom buttons',
-            description: `Same as info modal but with custom buttons and callbacks`,
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'infoModalWithCustomButtons',
+        showSource: false,
+        title: 'Info modal with custom buttons',
+        description: `Same as info modal but with custom buttons and callbacks`,
+        template: `
         <modal-consumer [action]="'openInfoModalWithCustomButtons'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>
@@ -96,14 +96,14 @@ export default experimentOn('Modals')
           ]]>
         </pre>
         </div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'warningModalWithCustomButtons',
-            showSource: false,
-            title: 'Warning modal with custom buttons',
-            description: `Same as warning modal but with custom buttons and callbacks`,
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'warningModalWithCustomButtons',
+        showSource: false,
+        title: 'Warning modal with custom buttons',
+        description: `Same as warning modal but with custom buttons and callbacks`,
+        template: `
         <modal-consumer [action]="'openWarningModalWithCustomButtons'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>
@@ -123,14 +123,14 @@ export default experimentOn('Modals')
           ]]>
         </pre>
         </div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'customModal1',
-            showSource: false,
-            title: 'Custom modal 1',
-            description: 'Opens a modal with dynamic inner content and customizable title, buttons, and callbacks.',
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'customModal1',
+        showSource: false,
+        title: 'Custom modal 1',
+        description: 'Opens a modal with dynamic inner content and customizable title, buttons, and callbacks.',
+        template: `
         <modal-consumer [action]="'openCustomModal1'"></modal-consumer>
         <div class="example-source">Source Code:
         <pre>
@@ -162,18 +162,18 @@ export default experimentOn('Modals')
                 {{ '}' }}, 2000, saveButton);
           {{ '}' }};
         </pre></div>`,
-            styles: [sourceStyles]
-        },
-        {
-            id: 'customModal2',
-            showSource: false,
-            title: 'Custom modal 2',
-            description: 'Opens a modal with, and change his buttons and title',
-            template: `
+        styles: [sourceStyles]
+      },
+      {
+        id: 'customModal2',
+        showSource: false,
+        title: 'Custom modal 2',
+        description: 'Opens a modal with, and change his buttons and title',
+        template: `
         <modal-consumer [action]="'openCustomModal2'"></modal-consumer>
         `,
-            styles: [sourceStyles]
-        },
+        styles: [sourceStyles]
+      },
         {
             id: 'multipleModals',
             showSource: false,
