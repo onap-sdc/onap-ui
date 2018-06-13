@@ -167,8 +167,19 @@ sdc-modal{
       }
     }
     .sdc-modal__content {
+      position: relative;
       order: 2;
       padding: 10px 60px 20px 60px;
+      .disabled-modal{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1002;
+        background-color: $white;
+        opacity: 0.5;
+      }
     }
     .sdc-modal__footer {
       order: 3;

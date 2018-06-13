@@ -9,6 +9,7 @@ export default `
         </div>
 
         <div class="sdc-modal__content" >
+                <div class="disabled-modal" *ngIf="isDisabled"></div>
                 <div *ngIf="message" [innerHtml]="message"></div>
                 <div #dynamicContentContainer></div>
         </div>
