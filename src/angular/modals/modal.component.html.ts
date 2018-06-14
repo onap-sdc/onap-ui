@@ -1,4 +1,5 @@
 export default `
+<div class="modal-background" [@toggleBackground]="modalVisible" ></div>
 <div class="sdc-modal {{size}}">
     <div class="sdc-modal__wrapper sdc-modal-type-{{type}}" [@toggleModal]="modalVisible" (@toggleModal.done)="modalToggled($event)">
 
@@ -32,5 +33,4 @@ export default `
 
     </div>
 </div>
-<div class="modal-background" [@toggleBackground]="modalVisible" ></div>
 `;
