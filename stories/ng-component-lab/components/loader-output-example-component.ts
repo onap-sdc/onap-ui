@@ -1,5 +1,4 @@
-import { Component, Input, Output, EventEmitter, ComponentRef, ViewChild, ViewChildren, QueryList } from "@angular/core";
-import { setTimeout } from "timers";
+import { Component, ViewChild, ViewChildren, QueryList } from "@angular/core";
 import { LoaderPerfomanceItem } from "./loader-performance-item";
 import { LoaderComponent } from "../../../src/angular/loader/loader.component";
 

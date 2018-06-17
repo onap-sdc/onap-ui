@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, HostBinding } from '@angular/core';
-import template from "./filter-bar.component.html";
+import { template } from "./filter-bar.component.html";
 
 @Component({
     selector: 'sdc-filter-bar',

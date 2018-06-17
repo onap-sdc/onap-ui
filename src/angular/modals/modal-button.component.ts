@@ -1,6 +1,6 @@
-import {Component, Input, HostListener, EventEmitter, Output} from "@angular/core";
+import { Component, Input, HostListener, EventEmitter, Output } from "@angular/core";
 import { ButtonComponent } from "../buttons/button.component";
-import template from "./../buttons/button.component.html";
+import { template } from "./../buttons/button.component.html";
 
 @Component({
     selector: "sdc-modal-button",

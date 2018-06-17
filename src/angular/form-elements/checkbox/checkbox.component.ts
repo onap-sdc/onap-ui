@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
-import template from "./checkbox.component.html";
+import { template } from "./checkbox.component.html";
 
 @Component({
     selector: 'sdc-checkbox',

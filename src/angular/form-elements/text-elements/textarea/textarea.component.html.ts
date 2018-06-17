@@ -1,7 +1,4 @@
-/**
- * Created by rc2122 on 5/24/2018.
- */
-export default `
+export const template = `
 <div class="sdc-textarea">
     <label class="sdc-textarea__label" *ngIf="label" [ngClass]="{'required':required}">{{label}}</label>
     <textarea

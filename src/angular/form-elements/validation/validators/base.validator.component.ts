@@ -1,6 +1,5 @@
 import { Input, Component, ContentChildren, EventEmitter, Output, QueryList, SimpleChanges, HostBinding } from "@angular/core";
-import { IValidator } from './validator.interface';
-import template from "./base.validator.component.html";
+import { template } from "./base.validator.component.html";
 
 @Component({
     selector: 'sdc-validator',

@@ -1,7 +1,6 @@
 import { experimentOn } from '@islavi/ng-component-lab';
 import {Placement} from "../../src/angular/common/enums";
 
-
 /**************************************************
  * Adding custom styles for example
  *************************************************/

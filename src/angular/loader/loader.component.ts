@@ -1,5 +1,5 @@
 import { Component, Input, ViewContainerRef, Inject, OnInit, OnDestroy, Output, EventEmitter } from "@angular/core";
-import template from "./loader.component.html";
+import { template } from "./loader.component.html";
 import { LoaderService } from "./loader.service";
 
 export enum LoaderSize {

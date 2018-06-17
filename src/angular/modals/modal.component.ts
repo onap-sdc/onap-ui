@@ -1,27 +1,22 @@
-import {
-    Component, Input, Output, ViewContainerRef, ViewChild, ComponentRef, trigger, state, animate, transition, style,
-    EventEmitter, Renderer, OnInit
-} from '@angular/core';
+import { Component, Input, ViewContainerRef, ViewChild, ComponentRef, trigger, state, animate, transition, style, Renderer, OnInit } from '@angular/core';
 import { ModalButtonComponent } from './modal-button.component';
 import { LowerCasePipe } from '@angular/common';
 import { ModalCloseButtonComponent } from './modal-close-button.component';
 import { ModalType } from './models/modal-config';
-import { SvgIconComponent } from '../components';
-import template from './modal.component.html';
+import { template } from './modal.component.html';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { Mode, Size } from '../common/enums';
 
 @Component({
     selector: 'sdc-modal',
     template: template,
     animations: [
         trigger('toggleBackground', [
-            transition('* => 1', [style({opacity: 0}), animate('.45s cubic-bezier(0.23, 1, 0.32, 1)')]),
-            transition('1 => *', [animate('.35s cubic-bezier(0.23, 1, 0.32, 1)', style({opacity: 0}))])
+            transition('* => 1', [style({ opacity: 0 }), animate('.45s cubic-bezier(0.23, 1, 0.32, 1)')]),
+            transition('1 => *', [animate('.35s cubic-bezier(0.23, 1, 0.32, 1)', style({ opacity: 0 }))])
         ]),
         trigger('toggleModal', [
-            transition('* => 1', [style({opacity: 0, transform: 'translateY(-80px)'}),  animate('.45s cubic-bezier(0.23, 1, 0.32, 1)')]),
-            transition('1 => *', [style({opacity: 1, transform: 'translateY(0px)'}), animate('.35s ease-in-out', style({opacity:0, transform: 'translateY(-80px)'}))])
+            transition('* => 1', [style({ opacity: 0, transform: 'translateY(-80px)' }), animate('.45s cubic-bezier(0.23, 1, 0.32, 1)')]),
+            transition('1 => *', [style({ opacity: 1, transform: 'translateY(0px)' }), animate('.35s ease-in-out', style({ opacity: 0, transform: 'translateY(-80px)' }))])
         ])
     ]
 })
@@ -43,7 +38,7 @@ export class ModalComponent implements OnInit {
 
     modalVisible: boolean;
     // Allows for custom component as body instead of simple message.
-    @ViewChild('dynamicContentContainer', {read: ViewContainerRef}) dynamicContentContainer: ViewContainerRef;
+    @ViewChild('dynamicContentContainer', { read: ViewContainerRef }) dynamicContentContainer: ViewContainerRef;
     innerModalContent: ComponentRef<any>;
 
     public calculatedTestId: string;
@@ -79,9 +74,9 @@ export class ModalComponent implements OnInit {
     private noSvg = ``;
 
     constructor(private renderer: Renderer,
-                private domSanitizer: DomSanitizer,
-                private lowerCasePipe: LowerCasePipe
-            ) {
+        private domSanitizer: DomSanitizer,
+        private lowerCasePipe: LowerCasePipe
+    ) {
         this.modalVisible = true;
     }
 
@@ -101,7 +96,7 @@ export class ModalComponent implements OnInit {
                 this.svgIconContentSafeHtml = this.domSanitizer.bypassSecurityTrustHtml(this.successSvg);
                 break;
             default:
-            this.svgIconContentSafeHtml = this.domSanitizer.bypassSecurityTrustHtml(this.noSvg);
+                this.svgIconContentSafeHtml = this.domSanitizer.bypassSecurityTrustHtml(this.noSvg);
         }
     }
 

@@ -1,4 +1,3 @@
-import { Placement } from "../../common/enums";
 import { IButtonComponent } from "../../buttons/ibutton.interface";
 
 export interface IModalConfig {
