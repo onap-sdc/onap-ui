@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges, HostBinding } from "@angula
 import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
 import { Mode, Size, BackgroundShape, BackgroundColor } from "../common/enums";
 import iconsMap from '../../common/icons-map';
-import template from './svg-icon.component.html';
+import { template } from './svg-icon.component.html';
 
 @Component({
     selector: 'svg-icon',
@@ -34,7 +34,7 @@ export class SvgIconComponent implements OnChanges {
         this.disabled = false;
     }
 
-    static get Icons(): {[key: string]: string} {
+    static get Icons(): { [key: string]: string } {
         return iconsMap;
     }
 

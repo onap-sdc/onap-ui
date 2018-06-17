@@ -1,4 +1,4 @@
-export default `
+export const template = `
 <div class="multiline-ellipsis-container" [ngClass]="className" [ngStyle]="stylesContainer" #multilineEllipsisContainer>
 	<div class="multiline-ellipsis-content" [ngStyle]="stylesContent" #multilineEllipsisContent>
 		<ng-content></ng-content>

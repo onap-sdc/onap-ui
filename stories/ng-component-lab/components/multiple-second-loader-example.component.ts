@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { LoaderService } from "../../../src/angular/loader/loader.service";
 import { setTimeout } from "timers";
 

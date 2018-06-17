@@ -1,8 +1,7 @@
-import {Component, ComponentRef, Input} from "@angular/core";
-import { ButtonComponent } from "../buttons/button.component";
+import { Component, ComponentRef, Input } from "@angular/core";
 import { ModalService } from "./modal.service";
 import { RippleAnimationAction } from "../animations/ripple-click.animation.directive";
-import {ModalComponent} from "./modal.component";
+import { ModalComponent } from "./modal.component";
 
 @Component({
     selector: "sdc-modal-close-button",

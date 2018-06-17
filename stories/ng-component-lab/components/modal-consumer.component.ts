@@ -1,8 +1,7 @@
-import {Component, Input, Output, EventEmitter, ComponentRef} from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { ModalService } from "../../../src/angular/modals/modal.service";
 import { IModalConfig, ModalType, ModalSize } from "../../../src/angular/modals/models/modal-config";
 import { ModalInnerContent } from "./modal-inner-content-example.component";
-import { ButtonComponent } from "../../../src/angular/buttons/button.component";
 import { ModalButtonComponent } from './../../../src/angular/modals/modal-button.component';
 import { Placement, ButtonType } from "../../../src/angular/common/enums";
 import { ModalComponent } from "../../../src/angular/components";

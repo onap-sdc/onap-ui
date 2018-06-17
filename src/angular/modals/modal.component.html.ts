@@ -1,4 +1,4 @@
-export default `
+export const template = `
 <div class="modal-background" [@toggleBackground]="modalVisible" ></div>
 <div class="sdc-modal {{size}}">
     <div class="sdc-modal__wrapper sdc-modal-type-{{type}}" [@toggleModal]="modalVisible" (@toggleModal.done)="modalToggled($event)">

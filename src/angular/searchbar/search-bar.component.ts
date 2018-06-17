@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, HostBinding } from '@angular/core';
-import template from "./search-bar.component.html";
+import { template } from "./search-bar.component.html";
 
 @Component({
     selector: 'sdc-search-bar',
@@ -14,6 +14,6 @@ export class SearchBarComponent {
     @Output() public searchQueryClick: EventEmitter<string> = new EventEmitter<string>();
 
     private searchButtonClick = (): void => {
-      this.searchQueryClick.emit(this.searchQuery);
+        this.searchQueryClick.emit(this.searchQuery);
     }
 }

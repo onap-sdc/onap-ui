@@ -1,4 +1,3 @@
-import { SdcUiComponentsModule } from './index';
 import { downgradeComponent, downgradeInjectable } from "@angular/upgrade/static";
 import * as Components from './components';
 declare const angular: any;

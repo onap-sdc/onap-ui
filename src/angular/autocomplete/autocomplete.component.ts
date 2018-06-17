@@ -1,8 +1,7 @@
 import { OnInit, animate, Component, EventEmitter, Input, Output, state, style, transition, trigger } from '@angular/core';
-import { FilterBarComponent } from "../filterbar/filter-bar.component";
 import { URLSearchParams, Http } from "@angular/http";
 import { AutocompletePipe } from "./autocomplete.pipe";
-import template from "./autocomplete.component.html";
+import { template } from "./autocomplete.component.html";
 import 'rxjs/add/operator/map';
 
 export interface IDataSchema {

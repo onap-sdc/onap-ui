@@ -1,6 +1,6 @@
 import { Component, Input, Output, ViewEncapsulation, EventEmitter, HostBinding } from "@angular/core";
 import { Direction, IOptionGroup, IRadioButtonModel } from "./radio-button.model";
-import template from './radio-buttons-group.component.html';
+import { template } from './radio-buttons-group.component.html';
 
 @Component({
     selector: 'sdc-radio-group',
