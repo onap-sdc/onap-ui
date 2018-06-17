@@ -1,6 +1,6 @@
 {
   "name": "onap-ui",
-  "version": "5.0.12",
+  "version": "5.0.13",
   "description": "This project aims to create a unified UI styled components for multiple development teams who work on the same web-based applications.",
   "scripts": {
     "test": "jest && npm run karma-travis",
