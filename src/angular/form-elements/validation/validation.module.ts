@@ -7,6 +7,7 @@ import { RequiredValidatorComponent } from './validators/required.validator.comp
 import { RegexValidatorComponent } from './validators/regex.validator.component';
 import { CustomValidatorComponent } from './validators/custom.validator.component';
 import { ValidationGroupComponent } from './validation-group.component';
+import { ValidatorComponent } from './validators/base.validator.component';
 
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import { ValidationGroupComponent } from './validation-group.component';
         SvgIconModule
     ],
     declarations: [
+        ValidatorComponent,
         ValidationComponent,
         RegexValidatorComponent,
         RequiredValidatorComponent,
