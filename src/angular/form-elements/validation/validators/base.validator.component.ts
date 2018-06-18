@@ -1,10 +1,5 @@
 import { Input, Component, ContentChildren, EventEmitter, Output, QueryList, SimpleChanges, HostBinding } from "@angular/core";
-import { template } from "./base.validator.component.html";
 
-@Component({
-    selector: 'sdc-validator',
-    template: template
-})
 export abstract class ValidatorComponent {
 
     @Input() public message: any;
