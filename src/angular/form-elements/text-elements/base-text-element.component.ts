@@ -3,8 +3,6 @@ import { FormControl } from "@angular/forms";
 import { ValidatableComponent } from "../validation/validatable.component";
 import 'rxjs/add/operator/debounceTime';
 
-@Component({
-})
 export class BaseTextElementComponent extends ValidatableComponent implements OnInit {
 
     @Output('valueChange') public baseEmitter: EventEmitter<any> = new EventEmitter<any>();
