@@ -10,7 +10,6 @@ import { DropDownTriggerDirective } from "./dropdown/dropdown-trigger.directive"
 import {SvgIconModule} from "../svg-icon/svg-icon.module";
 import { ValidationModule } from './validation/validation.module';
 import {TextareaComponent} from "./text-elements/textarea/textarea.component";
-import { BaseTextElementComponent } from "./text-elements/base-text-element.component";
 
 @NgModule({
     imports: [
@@ -21,7 +20,6 @@ import { BaseTextElementComponent } from "./text-elements/base-text-element.comp
         SvgIconModule
     ],
     declarations: [
-        BaseTextElementComponent,
         DropDownComponent,
         InputComponent,
         CheckboxComponent,
