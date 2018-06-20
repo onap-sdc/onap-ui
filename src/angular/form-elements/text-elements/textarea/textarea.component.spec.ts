@@ -3,7 +3,7 @@ import { TextareaComponent } from "./textarea.component";
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-describe("Input Tests", () => {
+describe("textarea Tests", () => {
     let component: TextareaComponent;
     let fixture: ComponentFixture<TextareaComponent>;
 
@@ -23,28 +23,28 @@ describe("Input Tests", () => {
         expect(component).toBeDefined();
     }));
 
-    it("Input give value back", async(() => {
+    it("textarea give value back", async(() => {
         component.value = 'test';
         fixture.detectChanges();
         expect(component.value).toEqual('test');
     }));
 
-    it("Input contains input and label", async(() => {
+    it("textarea contains textarea and label", async(() => {
         component.value = 'test';
         component.label = 'testlable';
         fixture.detectChanges();
         const htmlTextareaComponent: HTMLElement = fixture.nativeElement;
-        const input: HTMLElement = htmlTextareaComponent.querySelector('input');
+        const textarea: HTMLElement = htmlTextareaComponent.querySelector('textarea');
         const label: HTMLElement = htmlTextareaComponent.querySelector('label');
-        expect(input && label).toBeTruthy();
+        expect((textarea != null) && (label != null)).toBeTruthy();
     }));
 
-    it("Input value working", async(() => {
+    it("textarea value working", async(() => {
         component.value = 'testtesttest';
         fixture.detectChanges();
         const htmlTextareaComponent: HTMLElement = fixture.nativeElement;
-        const inputValue = htmlTextareaComponent.querySelector('input').value;
-        expect(inputValue === component.value).toBeTruthy();
+        const textareaValue = htmlTextareaComponent.querySelector('textarea').value;
+        expect(textareaValue === component.value).toBeTruthy();
     }));
 
     it("If required consist required style", async(() => {

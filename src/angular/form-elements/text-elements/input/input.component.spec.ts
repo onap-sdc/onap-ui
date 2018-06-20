@@ -36,7 +36,7 @@ describe("Input Tests", () => {
         const htmlInputComponent: HTMLElement = fixture.nativeElement;
         const input: HTMLElement = htmlInputComponent.querySelector('input');
         const label: HTMLElement = htmlInputComponent.querySelector('label');
-        expect(input && label).toBeTruthy();
+        expect((input != null) && (label != null)).toBeTruthy();
     }));
 
     it("Input value working", async(() => {
