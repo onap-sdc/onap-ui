@@ -52,3 +52,7 @@ export { AccordionComponent } from './accordion/accordion.component';
 
 // Multiline Ellipsis
 export { MultilineEllipsisComponent } from './multiline-ellipsis/multiline-ellipsis.component';
+
+//Loader
+export { LoaderComponent } from './loader/loader.component';
+export { LoaderService } from './loader/loader.service';
