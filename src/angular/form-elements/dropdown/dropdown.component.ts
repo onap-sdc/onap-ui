@@ -64,7 +64,6 @@ export class DropDownComponent extends ValidatableComponent implements OnChanges
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        console.log("ngOnChanges");
         if (changes.selectedOption && changes.selectedOption.currentValue !== changes.selectedOption.previousValue) {
             if (typeof changes.selectedOption.currentValue === 'string' && this.isSelectable(changes.selectedOption.currentValue)) {
                 this.setSelected(changes.selectedOption.currentValue);

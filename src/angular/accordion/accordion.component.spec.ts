@@ -3,7 +3,7 @@ import {async, TestBed, ComponentFixture} from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SvgIconModule } from "../svg-icon/svg-icon.module";
 import { SvgIconComponent } from '../svg-icon/svg-icon.component';
-import {NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe('Tests for Accordion', (() => {
     let fixture: ComponentFixture<AccordionComponent>;
@@ -33,7 +33,7 @@ describe('Tests for Accordion', (() => {
         expect(component).toBeDefined();
     }));
 
-    fit (('Component Accordion open onClick'), async(() => {
+    it (('Component Accordion open onClick'), async(() => {
         const closeState = fixture.nativeElement.querySelectorAll('.down').length;
         component.toggleAccordion();
         fixture.detectChanges();
