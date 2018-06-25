@@ -25,7 +25,7 @@ export const template = `
                 [spinner_position]="button.spinner_position"
                 [show_spinner]="button.show_spinner"
                 [callback]="button.callback"
-                [testId]="getCalculatedTestId('button-' + button.text)"
+                [testId]="button.testId || getCalculatedTestId('button-' + button.text)"
                 (closeModalEvent)="closeModal()"
                 >
             </sdc-modal-button>
