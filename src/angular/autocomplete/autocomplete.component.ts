@@ -27,7 +27,7 @@ export interface IDataSchema {
     ],
     providers: [AutocompletePipe]
 })
-export class SearchWithAutoCompleteComponent implements OnInit {
+export class AutoCompleteComponent implements OnInit {
     @Input() public data: any[] = [];
     @Input() public dataSchema: IDataSchema;
     @Input() public dataUrl: string;
