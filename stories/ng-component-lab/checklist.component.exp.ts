@@ -12,9 +12,9 @@ const checkListExample1: ChecklistModel =  new ChecklistModel(checklistValuesExa
 
 const checklistValuesExample2 = [];
 const checkListExample2: ChecklistModel =  new ChecklistModel(checklistValuesExample2,
-    [new ChecklistItemModel('apple', false, false, null, 0),
-        new ChecklistItemModel('banana', false, false, null, 1),
-        new ChecklistItemModel('orange', false, false, null, 2)]);
+    [new ChecklistItemModel('apple', false, false, null, 'aa', 0),
+        new ChecklistItemModel('banana', false, false, null, 'bb', 1),
+        new ChecklistItemModel('orange', false, false, null, 'cc', 2)]);
 
 const checklistValuesExample3 = [];
 const checkListExample3: ChecklistModel =  new ChecklistModel(checklistValuesExample3,
@@ -91,9 +91,9 @@ export default experimentOn('Checklist')
                 <h5>The checklistModel parameter:</h5>
                 const checklistValues = [];
                 const checklistModel: ChecklistModel =  new ChecklistModel(checklistValues,
-                    [new ChecklistItemModel('apple', false, false, null, 0),
-                    new ChecklistItemModel('banana', false, false, null, 1),
-                    new ChecklistItemModel('orange', false, false, null, 2)]);
+                    [new ChecklistItemModel('apple', false, false, null, 'aa', 0),
+                    new ChecklistItemModel('banana', false, false, null, 'bb', 1),
+                    new ChecklistItemModel('orange', false, false, null, 'cc', 2)]);
             </pre>
         `,
         template: `

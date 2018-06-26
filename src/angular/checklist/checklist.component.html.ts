@@ -5,7 +5,8 @@ export const template = `
                       [(checked)]="checkbox.isChecked"
                       [disabled]="checkbox.disabled"
                       (checkedChange)="checkboxCheckedChange(checkbox, checklistModel)"
-                      [ngClass]="{'semi-checked': !checkbox.isChecked && hasCheckedChild(currentCheckbox)}"></sdc-checkbox>
+                      [ngClass]="{'semi-checked': !checkbox.isChecked && hasCheckedChild(currentCheckbox)}"
+                      [testId]="checkbox.testId"></sdc-checkbox>
     </div>
     <div *ngIf="checkbox.subLevelChecklist" class="checkbox-sublist">
         <sdc-checklist [checklistModel]="checkbox.subLevelChecklist"
