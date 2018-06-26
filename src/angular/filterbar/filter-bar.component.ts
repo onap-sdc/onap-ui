@@ -12,7 +12,7 @@ export class FilterBarComponent {
     @Input() public placeholder: string;
     @Input() public label: string;
     @Input() public debounceTime: number;
-
+    @Input() public testId: string;
     @Input() public searchQuery: string;
     @Output() public searchQueryChange: EventEmitter<any> = new EventEmitter<any>();
 
