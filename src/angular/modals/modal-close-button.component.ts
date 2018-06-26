@@ -1,4 +1,4 @@
-import { Component, ComponentRef, Input } from "@angular/core";
+import { Component, ComponentRef, EventEmitter, Input, Output } from "@angular/core";
 import { ModalService } from "./modal.service";
 import { RippleAnimationAction } from "../animations/ripple-click.animation.directive";
 import { ModalComponent } from "./modal.component";
@@ -22,7 +22,8 @@ export class ModalCloseButtonComponent {
     @Input() testId: string;
     @Input() disabled: boolean;
     @Input() modalInstanceRef: ComponentRef<ModalComponent>;
-
+    @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
+    
     public rippleAnimationAction: RippleAnimationAction = RippleAnimationAction.MOUSE_ENTER;
 
     constructor(private modalService: ModalService) {
@@ -30,6 +31,7 @@ export class ModalCloseButtonComponent {
 
     public closeModal = (): void => {
         this.modalInstanceRef.instance.closeModal();
+        this.onClick.emit();
     }
 
 }
