@@ -1,4 +1,4 @@
-export default `
+export const template = `
 <label class='sdc-radio-group__legend'>{{legend}}</label>
 <div class='sdc-radio-group__radios {{direction}}'>
     <template *ngFor="let item of options.items">

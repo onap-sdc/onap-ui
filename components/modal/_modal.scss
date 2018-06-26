@@ -8,7 +8,7 @@
   margin: auto;
   display: flex;
   align-items: center;
-  z-index: 1001;
+  z-index: 1000;
   svg path {
     fill: inherit;
   }
@@ -32,7 +32,21 @@
         }
       }
     }
-    &.sdc-modal-type-alert {
+
+    &.sdc-modal-type-info {
+      border-top: solid 6px $blue;
+      .sdc-modal__svg-use {
+        fill: $blue;
+      }
+      .svg-icon {
+        &.__exclamationTriangleLine {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    &.sdc-modal-type-warning, &.sdc-modal-type-alert {
       border-top: solid 6px $yellow;
       .sdc-modal__svg-use {
         fill: $yellow;
@@ -44,6 +58,20 @@
         }
       }
     }
+
+    &.sdc-modal-type-success {
+      border-top: solid 6px $green;
+      .sdc-modal__svg-use {
+        fill: $green;
+      }
+      .svg-icon {
+        &.__success {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
     &.sdc-modal-type-error {
       border-top: solid 6px $red;
       .sdc-modal__svg-use {
@@ -56,6 +84,7 @@
         }
       }
     }
+
     &.sdc-modal-type-custom {
       padding: 0px;
       border-top: none;
@@ -135,8 +164,18 @@
       }
     }
     .sdc-modal__content {
+      position: relative;
       order: 2;
       padding: 10px 60px 20px 60px;
+      .disabled-modal{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $white;
+        opacity: 0.5;
+      }
     }
     .sdc-modal__footer {
       order: 3;

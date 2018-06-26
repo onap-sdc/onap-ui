@@ -1,8 +1,7 @@
 import { Component, Input, AfterContentInit, ContentChildren, QueryList, HostBinding } from '@angular/core';
 import { TabComponent } from './children/tab.component';
-import { SvgIconComponent } from "./../../../src/angular/svg-icon/svg-icon.component";
-import { Mode, Placement, Size } from './../common/enums';
-import template from "./tabs.component.html";
+import { Mode, Size } from './../common/enums';
+import { template } from "./tabs.component.html";
 
 @Component({
     selector: 'sdc-tabs',
@@ -17,15 +16,15 @@ export class TabsComponent implements AfterContentInit {
     public _size = Size.medium;
 
     public selectTab(tab: TabComponent) {
-      // deactivate all tabs
-      this.tabs.toArray().forEach((_tab: TabComponent) => {
-        _tab.active = false;
-        _tab.titleIconMode = Mode.secondary;
-      });
+        // deactivate all tabs
+        this.tabs.toArray().forEach((_tab: TabComponent) => {
+            _tab.active = false;
+            _tab.titleIconMode = Mode.secondary;
+        });
 
-      // activate the tab the user has clicked on.
-      tab.active = true;
-      tab.titleIconMode = Mode.primary;
+        // activate the tab the user has clicked on.
+        tab.active = true;
+        tab.titleIconMode = Mode.primary;
     }
 
     public ngAfterContentInit() {
@@ -38,4 +37,4 @@ export class TabsComponent implements AfterContentInit {
         }
     }
 
-  }
+}

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output, forwardRef, OnChanges, SimpleChanges, OnInit, ElementRef, ViewChild, AfterViewInit, HostListener, Renderer } from '@angular/core';
 import { IDropDownOption, DropDownOptionType, DropDownTypes } from "./dropdown-models";
 import { ValidatableComponent } from './../validation/validatable.component';
-import template from './dropdown.component.html';
+import { template } from './dropdown.component.html';
 
 @Component({
     selector: 'sdc-dropdown',

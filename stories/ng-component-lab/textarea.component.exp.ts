@@ -1,10 +1,9 @@
-/**
- * Created by rc2122 on 5/24/2018.
- */
 import { experimentOn } from '@islavi/ng-component-lab';
+
 const valueChange = (value: any): void => {
     console.log('The value was changed! >>>>', value);
 };
+
 export default experimentOn('Textarea').group('Textarea', [
     {
         id: 'simpleTextarea',

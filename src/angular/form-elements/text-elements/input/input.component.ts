@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl } from "@angular/forms";
+import { template } from "./input.component.html";
+import { BaseTextElementComponent } from "../base-text-element.component";
 import 'rxjs/add/operator/debounceTime';
-import template from "./input.component.html";
-import {BaseTextElementComponent} from "../base-text-element.component";
 
 @Component({
     selector: 'sdc-input',

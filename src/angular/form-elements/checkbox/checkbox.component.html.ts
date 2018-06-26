@@ -1,4 +1,4 @@
-export default `
+export const template = `
 <div class="sdc-checkbox">
     <label SdcRippleClickAnimation [rippleClickDisabled]="disabled">
         <input type="checkbox" class="sdc-checkbox__input" [ngModel]="checked" (ngModelChange)="toggleState($event)" [disabled]="disabled">

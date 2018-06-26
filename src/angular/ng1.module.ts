@@ -1,4 +1,3 @@
-import { SdcUiComponentsModule } from './index';
 import { downgradeComponent, downgradeInjectable } from "@angular/upgrade/static";
 import * as Components from './components';
 declare const angular: any;
@@ -134,6 +133,13 @@ if (typeof angular !== "undefined") {
         component: Components.AccordionComponent,
         inputs: ['arrow-direction', 'css-class', 'title', 'open'],
         outputs: ['accordionChanged']
+    }));
+
+    // Multiline Ellipsis
+    SdcUiComponentsNg1Module.directive('multilineEllipsis', downgradeComponent({
+        component: Components.MultilineEllipsisComponent,
+        inputs: ['lines', 'line-height', 'className'],
+        outputs: ['hasEllipsisChanged']
     }));
 }
 

@@ -1,13 +1,8 @@
-/**
- * Created by rc2122 on 5/27/2018.
- */
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from "@angular/forms";
+import { ValidatableComponent } from "../validation/validatable.component";
 import 'rxjs/add/operator/debounceTime';
-import {ValidatableComponent} from "../validation/validatable.component";
 
-@Component({
-})
 export class BaseTextElementComponent extends ValidatableComponent implements OnInit {
 
     @Output('valueChange') public baseEmitter: EventEmitter<any> = new EventEmitter<any>();
@@ -34,7 +29,7 @@ export class BaseTextElementComponent extends ValidatableComponent implements On
 
     ngOnInit() {
         this.control.valueChanges.
-        debounceTime(this.debounceTime)
+            debounceTime(this.debounceTime)
             .subscribe((newValue: any) => {
                 this.baseEmitter.emit(this.value);
             });
