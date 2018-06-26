@@ -3,21 +3,21 @@ import { DropDownComponent } from './dropdown.component';
 import { IDropDownOption, DropDownTypes } from "./dropdown-models";
 import { FormsModule } from "@angular/forms";
 import {SvgIconModule} from "../../svg-icon/svg-icon.module";
+import dropdownComponentExp from '../../../../stories/ng-component-lab/dropdown.component.exp';
 
-
-const label:string = "DropDown example";
-const placeHolder:string = "Please choose option";
-const options:IDropDownOption[] = [
+const label: string = "DropDown example";
+const placeHolder: string = "Please choose option";
+const options: IDropDownOption[] = [
     {
-        label:'First Option',
+        label: 'First Option',
         value: 'First Option'
     },
     {
-        label:'Second Option',
+        label: 'Second Option',
         value: 'Second Option'
     },
     {
-        label:'Third Option',
+        label: 'Third Option',
         value: 'Third Option'
     }
 ];
@@ -25,28 +25,23 @@ const options:IDropDownOption[] = [
 describe('DropDown component', () => {
     let fixture: ComponentFixture<DropDownComponent>;
     let component: DropDownComponent;
-
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ DropDownComponent ],
-            imports:[
+            imports: [
                 FormsModule,
                 SvgIconModule
             ]
         }).compileComponents();
         fixture = TestBed.createComponent(DropDownComponent);
         component = fixture.componentInstance;
-
-    }));
-
-    beforeEach(()=>{
         component.label = label;
         component.placeHolder = placeHolder;
         component.options = options;
         component.type = DropDownTypes.Regular;
-        console.log('herer we got component', component)
         fixture.detectChanges();
-    });
+
+    }));
 
     it('component should be created', () => {
         expect(component).toBeTruthy();
@@ -68,4 +63,12 @@ describe('DropDown component', () => {
         expect(component.options.length).toEqual(0);
     });
 
+    it('component should export the selected value', () => {
+        const option = options[1];
+        component.selectOption(option);
+        fixture.detectChanges();
+        const dropdownHtml = fixture.nativeElement;
+        const selectedItemText = dropdownHtml.querySelector('.selected').innerHTML;
+        expect(selectedItemText === component.selectedOption.label).toBeTruthy();
+    });
 });

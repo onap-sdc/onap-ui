@@ -1,6 +1,6 @@
 export interface IRadioButtonModel {
     label: string;
-    disabled: boolean;
+    disabled?: boolean;
     name: string;
     value: string;
 };
