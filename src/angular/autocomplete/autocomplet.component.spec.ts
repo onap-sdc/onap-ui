@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import {AutocompletePipe} from './autocomplete.pipe';
 import { FilterBarModule } from "../filterbar/filter-bar.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {By} from '@angular/platform-browser';
+import autocompleteComponentExp from '../../../stories/ng-component-lab/autocomplete.component.exp';
 
 
 
@@ -50,17 +52,23 @@ describe("AutoComplite Tests", () => {
         expect(listHtml != null && listItemsCount === 0).toBeTruthy();
     }));
 
-    it('Auto Complite build not empty DOM List', async(() => {
+    fit('Auto Complite build not empty DOM List', async(() => {
         component.data = testData;
-        let input = fixture.nativeElement.querySelector('input');
-        input.value = 'r';
+        component.dataSchema = {key: 'id', value: 'color'};
+        component.placeholder = 'search text';
+        component.label = 'search by color:';
+        component.onSearchQueryChanged('re');
+        console.info(component.complexData)
+        let res = component.autocompletePipe.transform(component.complexData, component.searchQuery);
         fixture.detectChanges();
-        const autoCompliteHtml = fixture.nativeElement;
-        const listHtml = autoCompliteHtml.querySelector('ul');
-        const listItemsCount = autoCompliteHtml.querySelectorAll('li').length;
-        expect(listHtml != null && listItemsCount === 0).toBeTruthy();
+        console.info(res);
+        fixture.whenStable().then(() => {
+            const autoCompliteHtml = fixture.nativeElement;
+            console.info(component.searchQuery);
+            const listHtml = autoCompliteHtml.querySelector('ul');
+            const listItemsCount = autoCompliteHtml.querySelectorAll('li').length;
+            expect(listHtml != null && listItemsCount === 3).toBeTruthy();
+        });      
     }));
-
-    
 
 });
