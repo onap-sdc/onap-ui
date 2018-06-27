@@ -10,6 +10,7 @@ export class SearchBarComponent {
     @HostBinding('class') classes = 'sdc-search-bar';
     @Input() public placeholder: string;
     @Input() public label: string;
+    @Input() public testId: string;
     @Input() public searchQuery: string;
     @Output() public searchQueryClick: EventEmitter<string> = new EventEmitter<string>();
 

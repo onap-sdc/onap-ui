@@ -24,6 +24,7 @@ export default experimentOn('Filter Bar').group('FilterBar', [
         template: `
             <sdc-filter-bar placeholder="filter text"
                             label="filter example:"
+                            testId="filterExample"
                             [(searchQuery)]="searchText"
                             (searchQueryChange)="onChange($event)">
             </sdc-filter-bar>
