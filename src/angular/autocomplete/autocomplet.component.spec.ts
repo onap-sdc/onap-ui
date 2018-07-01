@@ -52,22 +52,20 @@ describe("AutoComplite Tests", () => {
         expect(listHtml != null && listItemsCount === 0).toBeTruthy();
     }));
 
-    fit('Auto Complite build not empty DOM List', async(() => {
+    it('Auto Complite build not empty DOM List', async(() => {
         component.data = testData;
         component.dataSchema = {key: 'id', value: 'color'};
         component.placeholder = 'search text';
         component.label = 'search by color:';
-        component.onSearchQueryChanged('re');
-        console.info(component.complexData)
-        let res = component.autocompletePipe.transform(component.complexData, component.searchQuery);
+        component.searchQuery = '';
         fixture.detectChanges();
-        console.info(res);
+        component.onSearchQueryChanged('re');
+        fixture.detectChanges();
         fixture.whenStable().then(() => {
             const autoCompliteHtml = fixture.nativeElement;
-            console.info(component.searchQuery);
             const listHtml = autoCompliteHtml.querySelector('ul');
             const listItemsCount = autoCompliteHtml.querySelectorAll('li').length;
-            expect(listHtml != null && listItemsCount === 3).toBeTruthy();
+            expect(listHtml != null && listItemsCount === 2).toBeTruthy();
         });      
     }));
 
