@@ -5,6 +5,7 @@ import { ModalCloseButtonComponent } from './modal-close-button.component';
 import { ModalType } from './models/modal-config';
 import { template } from './modal.component.html';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import {Subject} from "rxjs/Subject";
 
 @Component({
     selector: 'sdc-modal',
@@ -44,6 +45,7 @@ export class ModalComponent implements OnInit {
     public calculatedTestId: string;
     public modalCloseButton: ModalCloseButtonComponent;
     public svgIconContentSafeHtml: SafeHtml;
+    public onCloseModal: Subject<any> = new Subject();
     private isDisabled: boolean;
 
     private infoSvg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 24 24">
@@ -145,8 +147,9 @@ export class ModalComponent implements OnInit {
         // evn.taregt.classList.add('sdc-ripple-click__animated');
     }
 
-    public closeModal = (): void => {
+    public closeModal = (value?: any): void => {
         this.modalVisible = false;
+        this.onCloseModal.next(value);
     }
 
     public disabledModal = (isDisabled: boolean): void => {
