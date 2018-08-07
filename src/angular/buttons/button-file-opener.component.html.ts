@@ -1,5 +1,5 @@
 export const template = `
-<div (click)="fileOpener.click()" 
+<div (click)="fileOpener.click()"
      class="sdc-button sdc-button__{{ type }} btn-{{ size }} {{ iconPositionClass }}"
      [attr.data-tests-id]="testId"
      >
@@ -7,7 +7,8 @@ export const template = `
     <input
         #fileOpener
         type="file"
-        [accept]="allowedExtensions" 
+        [attr.data-tests-id]="'file' + testId"
+        [accept]="allowedExtensions"
         [disabled] = "disabled"
         (change)="onFileSelect($event)"
         base-sixty-four-input
