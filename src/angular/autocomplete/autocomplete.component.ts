@@ -27,7 +27,7 @@ export interface IDataSchema {
     ],
     providers: [AutocompletePipe]
 })
-export class SearchWithAutoCompleteComponent implements OnInit {
+export class AutoCompleteComponent implements OnInit {
     @Input() public data: any[] = [];
     @Input() public dataSchema: IDataSchema;
     @Input() public dataUrl: string;
@@ -35,12 +35,12 @@ export class SearchWithAutoCompleteComponent implements OnInit {
     @Input() public placeholder: string;
     @Output() public itemSelected: EventEmitter<any> = new EventEmitter<any>();
 
-    private searchQuery: string;
-    private complexData: any[] = [];
-    private autoCompleteResults: any[] = [];
-    private isItemSelected: boolean = false;
+    public searchQuery: string;
+    public complexData: any[] = [];
+    public autoCompleteResults: any[] = [];
+    public isItemSelected: boolean = false;
 
-    public constructor(private http: Http, private autocompletePipe: AutocompletePipe) {
+    public constructor(private http: Http, public autocompletePipe: AutocompletePipe) {
     }
 
     public ngOnInit(): void {
@@ -81,7 +81,7 @@ export class SearchWithAutoCompleteComponent implements OnInit {
         this.itemSelected.emit(selectedItem.key);
     }
 
-    private onSearchQueryChanged = (searchText: string): void => {
+    public onSearchQueryChanged = (searchText: string): void => {
         if (searchText !== this.searchQuery) {
             this.searchQuery = searchText;
             if (!this.searchQuery) {

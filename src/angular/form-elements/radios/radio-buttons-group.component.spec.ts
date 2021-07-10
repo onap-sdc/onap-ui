@@ -62,7 +62,6 @@ describe("Radio Buttons unit-tests", () => {
         fixture.detectChanges();
         const radioHtml = fixture.nativeElement;
         const countRadios = radioHtml.querySelectorAll('input').length;
-        console.info(countRadios);
         expect(countRadios === component.options.items.length).toBeTruthy();
     }));
 });
